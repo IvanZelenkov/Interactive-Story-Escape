@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet">
+    <title>ESCAPE</title>
+</head>
+<body class="merchant">
+    <div class="wrapper">
+        <div class="merchant-text-box">
+            <span id="merchant-name">Merchant</span>: I've been waiting for you, Mister Winters.
+            <br>
+            <span id="ethan-name">Ethan</span>: How do you know my name?
+            <br>
+            <span id="merchant-name">Merchant</span>: Anyone who is anyone has heard of the likes of you. Though I must say, this castle arouses suspicion. 
+            <br>
+            <span id="ethan-name">Ethan</span>: Yeah, and so do you.
+            <br>
+            <span id="merchant-name">Merchant</span>: I am but a humble merchant.
+            <br>
+            <span id="ethan-name">Ethan</span>: Here?
+            <br>
+            <span id="merchant-name">Merchant</span>: Forgive my manners, call me the Duke. Now to business. Weapons, ammunition, healing salves - anything you desire, I can provide.
+            <hr>
+            <div class="container">
+                <div class="back">
+                    <a id="back" href="hall.html">⪻</a>
+                </div>
+            </div>
+        </div>
+        <video id="vid" class="video" autoplay loop muted preload="metadata">
+            <source src="videos/merchant.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <a id="shop_button" href="shop.html">Shop</a>
+    </div>
+    <iframe src="inventory.html" id="inventory" height="0" width="0"></iframe>
+    <script>
+        document.getElementById('vid').play(); /* makes video to autoplay in Chrome */
+        inventory.src += location.search;
+        back.href += location.search;
+        shop_button.href += location.search;
+    </script>
+</body>
+</html>

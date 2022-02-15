@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "interactive--story--escape",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

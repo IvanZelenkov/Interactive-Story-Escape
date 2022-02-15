@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet">
+    <title>ESCAPE</title>
+</head>
+<body class="outside">
+   <div class="end-text hide" id="game-over">
+    <img style="height: 80px; width: 80px;" src="images/icons8-punisher-26.png" alt="Logo">
+       <p>Thank you for playing in Escape.</p>
+       <p>If you enjoy this game, please stop and leave a comment saying so!</p>
+       <p>Your feedback and support are what help me continue making greater projects.</p>
+       <p style="color: black;">idzelenk@uno.edu</p>
+       <p>Thank you!</p>
+   </div>
+   <script>
+       setTimeout(function() {
+           document.getElementById("game-over").classList.remove("hide");},
+            2000);
+   </script>
+</body>
+</html>

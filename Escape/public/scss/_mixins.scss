@@ -1,0 +1,67 @@
+@mixin background($imgpath) {
+    background-image: url($imgpath);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin configureButtons {
+    font-size: 4vw;
+    font-family: "MainFont";
+    letter-spacing: 5px;
+    display: block;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: white;
+}
+
+@mixin textBox {
+    font-size: 55px;
+    font-family: "MainFont";
+    letter-spacing: 4px;
+    padding: 1.5%;
+    margin: 0px 40px 0px 0px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    opacity: 0.8;
+    overflow: auto;
+    box-shadow: 0px 0px 6em 1px rgb(0, 0, 0);
+    animation: transitionIn 5s;
+}
+
+@mixin shopBox {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    letter-spacing: 5px;
+    color: white;
+    background-image: url("../images/cells_background.jpg")
+}
+
+@mixin animated-arrow {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-left: 5px solid rgb(210, 182, 27);
+    border-top: 5px solid rgb(210, 182, 27);
+    transform: rotate(45deg);
+    margin: auto auto;
+    /* name | duration | delay */
+    animation: animate 2s infinite;
+}
+
+@mixin button {
+    font-family: "Numbers";
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.7s ease;
+}

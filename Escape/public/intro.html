@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet">
+    <title>ESCAPE</title>
+</head>
+<body class="intro">
+    <div class="wrapper">
+        <div class="intro-text-box">
+            Dimitrescu Castle is a large medieval castle owned by the Dimitrescu family and located in an Eastern European village.
+            Who controlled the castle at the time is not known, although it eventually fell into the hands of the Dimitrescu family,
+            who maintained a feudal, sometimes even tyrannical, rule over the people of their region. In the <span class="numbers">2020</span>s, 
+            the castle was the site of a series of brutal murders and mutilations instigated by the local nobility against the peasants. 
+            <hr>
+            <div class="container">
+                <div class="back">
+                    <a id="back" href="index.html">⪻</a>
+                </div>
+                <div class="next">
+                    <a id="next" href="start-room.html">⪼</a>
+                </div>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="images/castle.jpg" alt="Dimitrescu Castle">
+            <p class="img-description">Dimitrescu Castle</p>
+        </div> 
+        <div class="image-box">
+            <img src="images/intro1.jpg" alt="Vault">
+            <p class="img-description">Vault</p>
+        </div>
+        <div class="image-box">
+            <img src="images/intro2.jpg" alt="Torture">
+            <p class="img-description">Torture</p>
+        </div>
+        <iframe src="inventory.html" id="inventory" width="0" height="0"></iframe>
+        <script>
+            inventory.src += location.search;
+            next.href += location.search;
+        </script>
+    </div>
+</body>
+</html>

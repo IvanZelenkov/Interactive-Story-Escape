@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet">
+    <title>ESCAPE</title>
+</head>
+<body class="start-room">
+    <audio autoplay loop>
+        <source src="audio/wind.mp3" type="audio/mpeg"/>
+    </audio>
+    <div class="wrapper">
+        <div class="startRoom-text-box">
+            <span id="ethan-name">Ethan</span>: 
+            Someone kidnapped me and I don't know what they want from me. 
+            I have to find a way out of this room first.
+            <hr>
+            <a id="back" href="intro.html">⪻</a>
+        </div>
+        <div class="image-box">
+            <a id="hall" href="hall.html">
+                <img src="images/vent.png" alt="Room exit">
+                <p class="img-description">Vent</p>
+            </a>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <iframe src="inventory.html" id="inventory" width="0" height="0"></iframe>
+    <script>
+        inventory.src += location.search;
+        back.href += location.search;
+        hall.href += location.search;
+    </script>
+</body>
+</html>

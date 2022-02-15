@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet">
+    <title>ESCAPE</title>
+</head>
+<body class="inventory">
+    <h1 id="header">INVENTORY</h1>
+    <table>
+        <tr>
+            <th>♥️</th>
+            <th>💵</th>
+            <th><img id="gun" src="images/gun.png"></th>
+            <th>🔑</th>
+        </tr>
+        <tr>
+            <td id="hp">0</td>
+            <td id="money">0</td>
+            <td id="ammo">0</td>
+            <td id="key">0</td>
+        </tr>
+    </table>
+    <script>
+        var queryString = new URLSearchParams(location.search);
+        hp.innerText = queryString.get("hp");
+        money.innerText = queryString.get("money");
+        // handgun.innerText = queryString.get("handgun");
+        ammo.innerText = queryString.get("ammo");
+        key.innerText = queryString.get("key");
+        enemyHP.innerText = queryString.get("enemyHP");
+    </script>
+</body>
+</html>

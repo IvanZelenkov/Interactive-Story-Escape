@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>ESCAPE</title>
+</head>
+<body class="hall">
+    <div class="wrapper">
+        <div class="hall-text-box">
+            <span id="ethan-name">Ethan</span>: 
+            What a big hall! I see three paths and a way out. Where should I go?
+            <hr>
+            <div class="container">
+                <div class="back">
+                    <a id="back" href="start-room.html">⪻</a>
+                </div>
+            </div>
+        </div>
+        <div class="image-box">
+            <a id="upstairs" href="upstairs.html">
+                <img src="images/upstairs.jpg" alt="Upstairs">
+                <p class="img-description">Upstairs</p>
+            </a>
+        </div>
+        <div class="image-box">
+            <a id="merchant" href="merchant.html">
+                <img src="images/opened_door.jpg" alt="Opened door">
+                <p class="img-description">Opened door</p>
+            </a>
+        </div>
+        <div class="image-box">
+            <a id="downstairs" href="downstairs.html">
+                <img src="images/downstairs.jpg" alt="Downstairs">
+                <p class="img-description">Downstairs</p>
+            </a>
+        </div>
+    </div>
+    <iframe src="inventory.html" id="inventory" width="300" height="175"></iframe>
+    <p id="pin">Exit</p>
+    <a id="exit" href="exit.html">
+        <div class="invisible-box">
+            &nbsp&nbsp&nbsp&nbsp
+        </div>
+    </a>
+    <div class="arrow2">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <script>
+        inventory.src += location.search;
+        back.href += location.search;
+        merchant.href += location.search;
+        downstairs.href += location.search;
+        upstairs.href += location.search;
+        exit.href += location.search;
+    </script>
+</body>
+</html>

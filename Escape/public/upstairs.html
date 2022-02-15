@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>ESCAPE</title>
+</head>
+<body class="upstairs">
+    <div class="wrapper">
+        <div class="upstairs-enter-text-box">
+            <span id="ethan-name">Ethan</span>: 
+            This door is closed. I see a very tall woman. Is this the Lady Dimitrescu that was rumored about?
+            It looks like this is her room. I need something to kill her, she might have the key to it.
+            <hr>
+            <div class="back">
+                <a id="back" href="hall.html">⪻</a>
+            </div>
+        </div>
+        <div class="image-box">
+            <a id="dimitrescuRoom" onclick="openDoor()" href="#">
+                <img id="doorImage" src="images/dimitrescu-door.jpg" alt="Dimitrescu's room">
+                <p class="img-description">Dimitrescu's room</p>
+            </a>
+        </div>
+        <div class="image-box">
+            <a id="meeting_dimitrescu" href="meeting-dimitrescu.html">
+                <img src="images/dimitrescu-light.jpg" alt="Meeting Lady Dimitrescu">
+                <p class="img-description">Lady Dimitrescu</p>
+            </a>
+        </div>
+    </div>
+    <iframe src="inventory.html" id="inventory" width="300" height="175"></iframe>
+    <script>
+        inventory.src += location.search;
+        back.href += location.search;
+        meeting_dimitrescu.href += location.search;
+
+        var queryString = new URLSearchParams(location.search);
+        var key = +queryString.get("key");
+
+        function openDoor(){
+            if (key > 0)
+                dimitrescuRoom.href = "dimitrescu-room.html?" + queryString;
+        }
+    </script>
+</body>
+</html>

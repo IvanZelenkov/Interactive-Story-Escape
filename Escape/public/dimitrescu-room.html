@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>ESCAPE</title>
+</head>
+<body class="dimitrescu-room">
+    <div class="wrapper">
+        <div class="dimitrescu-room-text-box">
+            <span id="ethan-name">Ethan</span>: 
+            It's possible that the password to the main exit might be in here somewhere. 
+            I need to look around.
+            <hr>
+            <div class="back">
+                <a id="back" href="upstairs.html">⪻</a>
+            </div>
+        </div>
+        <div class="image-box">
+            <a id="amulet" href="amulet.html">
+                <img src="images/amulet.jpg" alt="Amulet">
+                <p class="img-description">Amulet</p>
+            </a>
+        </div>
+    </div>
+    <iframe src="inventory.html" id="inventory" width="0" height="0"></iframe>
+    <script>
+        inventory.src += location.search;
+        back.href += location.search;
+        amulet.href += location.search;
+    </script>
+</body>
+</html>

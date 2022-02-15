@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet">
+    <title>ESCAPE</title>
+</head>
+<body class="downstairs-enter">
+    <div class="wrapper">
+        <div class="downstairs-enter-text-box">
+            <span id="ethan-name">Ethan</span>: 
+            This place seems very dark and dangerous. 
+            Should I go in there? Maybe it's safe to go back?
+            <hr>
+            <div class="back">
+                <a id="back" href="hall.html">⪻</a>
+            </div>
+        </div>
+        <div class="image-box">
+            <a id="hall" href="trap.html">
+                <img src="images/downstairs-door.jpeg" alt="Room exit">
+                <p class="img-description">?</p>
+            </a>
+        </div>
+    </div>
+    <iframe src="inventory.html" id="inventory" width="300" height="175"></iframe>
+    <script>
+        inventory.src += location.search;
+        back.href += location.search;
+    </script>
+</body>
+</html>

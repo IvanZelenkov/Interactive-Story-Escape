@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>ESCAPE</title>
+</head>
+<body>
+    <video autoplay muted id="game-over-video">
+        <source src="videos/dimitrescu-attacks.mp4" type="video/mp4">
+    </video>
+    <div class="popup-text hide" id="game-over">
+        <p>Game Over</p>
+    </div>
+    <a id="game-over-exit" href="index.html">Exit</a>
+    <a id="game-over-exit" href="index.html">Exit</a>
+    <script>
+        setTimeout(function() {
+            document.getElementById("game-over").classList.remove("hide");},
+             7000);
+    </script>
+</body>
+</html>

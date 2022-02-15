@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet">
+    <title>ESCAPE</title>
+</head>
+<body class="shop">
+    <div class="shop-grid">
+        <div class="column1">
+            <div class="cell">Name</div>
+            <div class="cell">First Aid Med</div>
+            <div class="cell">Handgun</div>
+            <div class="cell">Handgun Ammo</div>
+        </div>
+        <div class="column2">
+            <div class="cell">Price</div>
+            <div class="cell-contains-number">175
+                <button class="buy-button" onclick="aid()">Buy</button>
+            </div>
+            <div class="cell-contains-number">300
+                <button class="buy-button" onclick="gun()">Buy</button>
+            </div>
+            <div class="cell-contains-number">50&nbsp
+                <button class="buy-button" onclick="bullet()">Buy</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <a class="back-arrow-shop" id="back" href="hall.html">⪻</a>
+    <iframe src="inventory.html" id="inventory" width="300" height="175"></iframe>
+    <script>
+        inventory.src += location.search;
+        back.href += location.search;
+
+        var queryString = new URLSearchParams(location.search);
+        var hp = +queryString.get("hp");
+        var money = +queryString.get("money");
+        var handgun = +queryString.get("handgun");
+        var bullets = +queryString.get("ammo");
+
+        function aid() {
+            if (money >= 175 && hp < 100){
+                queryString.set("money", money - 175);
+                if (hp > 75) {
+                    queryString.set("hp", 100);
+                } else {
+                    queryString.set("hp", hp + 25);
+                }
+                location.search = queryString;
+            }
+        }
+
+        function gun() {
+            if (money >= 350 && handgun == 0){
+                queryString.set("money", money - 300);
+                queryString.set("handgun", handgun + 1);
+                location.search = queryString;
+            }
+        }
+        function bullet() {
+            if (money >= 50 && handgun == 1){
+                queryString.set("money", money - 50);
+                queryString.set("ammo", bullets + 1);
+                location.search = queryString;
+            }
+        }
+    </script>        
+</body>
+</html>

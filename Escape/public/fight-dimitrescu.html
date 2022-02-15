@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icons8-punisher-26.png">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <title>ESCAPE</title>
+</head>
+<body class="fight-dimitrescu">
+    <div class="fight-controls">
+        <button class="fight-button-attack" onclick="attack()" type="button">Attack</button>
+        <a id="exit" class="control-button" href="#">Exit</a>
+    </div>
+    <iframe src="inventory.html" id="inventory" width="300" height="175"></iframe>
+    <script>
+        inventory.src += location.search;
+
+        var queryString = new URLSearchParams(location.search);
+        var hp = +queryString.get("hp");
+        var bullets = +queryString.get("ammo");
+        var key = +queryString.get("key");
+        var enemyHP = +queryString.get("enemyHP");
+        var bulletDamage = 25;
+        var enemyAttack = 15;
+
+        function attack() {
+            if (bullets != 0 && enemyHP != 0 && hp != 0) {
+                queryString.set("enemyHP", enemyHP - bulletDamage);
+                queryString.set("ammo", bullets - 1);
+
+                if (+queryString.get("enemyHP") <= 0 && key == 0 && hp != 0) {
+                    queryString.set("key", key + 1);
+                }
+                inventory.src = "inventory.html?" + queryString;
+                location.search = queryString;
+            }
+            if (+queryString.get("enemyHP") != 0 && hp > 0) {
+                if (hp <= 15) {
+                    queryString.set("hp", 0);
+                } else {
+                    queryString.set("hp", hp - enemyAttack);
+                }
+                inventory.src = "inventory.html?" + queryString;
+                location.search = queryString;
+            }
+        }
+        if (hp <= 0) {
+            exit.href = "lost-battle.html";
+        }
+        if (+queryString.get("enemyHP") <= 0 && key == 1)  {
+            exit.href = "upstairs.html" + location.search;
+        }
+    </script>
+</body>
+</html>
